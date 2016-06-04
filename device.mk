@@ -237,6 +237,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:system/etc/wifi/WCNSS_wlan_dictionary.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
+# ViPER4Android
+PRODUCT_PACKAGES += \
+    ViPER4Android
+
 # WiFi Display
 ifneq ($(QCPATH),)
 PRODUCT_BOOT_JARS += WfdCommon

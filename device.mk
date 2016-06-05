@@ -37,7 +37,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -120,6 +119,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck \
     make_ext4fs
+
+# Fingerprint sensor
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
+PRODUCT_PACKAGES += \
+    fingerprint.msm8916 \
+    fingerprintd
 
 # FM
 PRODUCT_PACKAGES += \
@@ -241,10 +248,6 @@ PRODUCT_COPY_FILES += \
 # ViPER4Android
 PRODUCT_PACKAGES += \
     ViPER4Android
-
-# Fingerprint sensor
-PRODUCT_PACKAGES += \
-    fingerprintd
 
 # WiFi Display
 ifneq ($(QCPATH),)

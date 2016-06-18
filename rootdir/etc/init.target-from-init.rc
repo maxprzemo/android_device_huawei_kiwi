@@ -244,7 +244,7 @@ service teecd /system/bin/teecd
     group system
     seclabel u:r:tee:s0
 
-service signinfolistener /sbin/signinfolistener
+service signinfolistener /system/bin/signinfolistener
     class core
     user system
     #seclabel u:r:signinfolistener:s0

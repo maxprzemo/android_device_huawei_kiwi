@@ -107,6 +107,8 @@ on post-fs-data
 
     chown system system /dev/fpc1020
     chmod 0660 /dev/fpc1020
+    
+    # Fingerprint sensor
     chown system system /sys/devices/platform/fingerprint/diag/result
     chown system system /sys/devices/platform/fingerprint/diag/navigation_enable
     chown system system /sys/devices/platform/fingerprint/diag/wakeup_enable
@@ -235,6 +237,7 @@ service rmt_oeminfo /sbin/rmt_oeminfo
     user root
     #seclabel u:r:oeminfo_domain:s0
 
+# Fingerprint sensor servivces
 service teecd /system/bin/teecd
     class core
     user system
@@ -245,6 +248,7 @@ service signinfolistener /sbin/signinfolistener
     class core
     user system
     #seclabel u:r:signinfolistener:s0
+# End Fingerprint sensor servivces
 
 service libqmi_oem_main /sbin/libqmi_oem_main
     class main

@@ -126,10 +126,22 @@ PRODUCT_PACKAGES += \
     e2fsck \
     make_ext4fs
 
+# Fingerprint sensor
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
+PRODUCT_PACKAGES += \
+    fingerprint.msm8916 \
+    fingerprintd
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -151,6 +163,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/cyttsp5_mt.kl:system/usr/keylayout/cyttsp5_mt.kl \
     $(LOCAL_PATH)/keylayout/goodix.kl:system/usr/keylayout/goodix.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    CMActions \
+    com.cyanogenmod.keyhandler
 
 # Lights
 PRODUCT_PACKAGES += \

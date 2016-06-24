@@ -174,7 +174,6 @@
          RIL_REQUEST_GET_RADIO_CAPABILITY + format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA</string>
 
-<<<<<<< HEAD
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
@@ -190,8 +189,6 @@
     <integer name="config_screenBrightnessDoze">17</integer>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
-=======
->>>>>>> 619fe0b4a4d20054b23814e8922e09acf8b9286a
     <!-- Operating voltage for bluetooth controller. 0 by default-->
     <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
 
